@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
 	<title>Halton Winkler 2016</title>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 	<style type="text/css">
 		@font-size-base: 15px;
 		
@@ -14,10 +15,10 @@
 			width: 100%;
 			margin: 0;
 			padding: 0;
-			background: #0077ca;
-			color: white;
+			background: #FAFAFA;
+			color: black;
 			font-size: 100%;
-			font-family: 'Open Sans', sans-serif;
+			font-family: 'Source Sans Pro', sans-serif;
 		}
 		
 		a {
@@ -25,48 +26,72 @@
 			color: white;
 		}
 		
-		#holder {
-			margin: 0 25%;
-			position: absolute;
-			top: 50%;
-			width:50%;
-			height:50%;
-			-ms-transform: translate(0, -50%);
-			-webkit-transform: translate(0, -50%);
-			-moz-transform: translate(0, -50%);
-			transform: translate(0, -50%);
-		}
-        
-		#text {
-			font-size: 1000%;
-			font-size: 10vw;
-			display: none;
-			text-align: center;
+		#poster-holder {
+			display: block;
+			height: 100vh;
 			width: 100%;
-			margin: 0;
-			position: absolute;
-			top: 50%;
-			-ms-transform: translate(0, -50%);
-			-webkit-transform: translate(0, -50%);
-			-moz-transform: translate(0, -50%);
-			transform: translate(0, -50%);
+			background-color: #0077ca;
+			box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
 		}
-			
-		#image {
-			width:100%;
-			height:100%;
-			background: url(images/center.png) no-repeat center center; 
+		
+		#poster-holder div {
+			width: 100%;
 			-webkit-background-size: contain;
 			-moz-background-size: contain;
 			-o-background-size: contain;
 			background-size: contain;
 		}
 		
-		#color {
-				height: 100%;
-				width: 100%;
-				position: relative;
-				background-color: #0077ca;
+		#top {
+			background: url(images/top.png) no-repeat left top;
+			height:10vh;
+		}
+		
+		#center {
+			background: url(images/center.png) no-repeat center center;
+			height:70vh;
+		}
+		
+		#bottom {
+			background: url(images/bottom.png) no-repeat bottom right;
+			height:10vh;
+		}
+		
+		#footer {
+			background: url(images/footer.png) no-repeat bottom center;
+			height:10vh;
+		}
+		
+		#wrapper {
+			max-width: 1000px;
+			margin: auto;
+		}
+		
+		#info {
+			padding: 15px;
+		}
+		
+		h1 {
+			color: #FF4D4D;
+			font-size: 2.4em;
+		}
+		
+		img {
+			padding: 10px;
+			box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+		}
+		
+		#paid {
+			font-style: normal;
+			letter-spacing: .1em;
+			font-weight: 500;
+			text-transform: uppercase;
+			border: 1px solid #364350;
+			font-size: 1rem;
+			max-width: 300px;
+			padding: .5rem 0;
+			margin: 2rem auto 0;
+			text-align: center;
 		}
 	</style>
 	<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
@@ -80,9 +105,21 @@
 	<script type="text/javascript" async src="https://apis.google.com/js/platform.js?publisherid=106029859874749039380"></script>
 </head>
 <body>
-	<div id="color" class="fade-in">
-		<div id="holder">
-			<div id="image"></div>
+	<div id="content">
+		<div id="poster-holder">
+			<div id="top"></div>
+			<div id="center"></div>
+			<div id="bottom"></div>
+			<div id="footer"></div>
+		</div>
+		<div id="wrapper">
+			<div id="info">
+				<h1 style="text-align: center;">Vote Halton Winkler for Drama Club Treasurer 2016!</h1>
+				<img src="images/halton.jpg"/>
+			</div>
+			<footer>
+				<p id="paid">Paid for by Halton 2016</p>
+			</footer>
 		</div>
 	</div>
 </body>
