@@ -101,9 +101,9 @@
 		}
 		
 		#info img {
-			padding: 0.75rem;
-			box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
-			margin: 1rem;
+			max-width: 100%;
+			max-height: 300px;
+			display: block;
 		}
 		
 		#info p {
@@ -111,20 +111,68 @@
 			font-size: 1.5rem;
 		}
 		
-		#info .leftTable {
-			text-align: left;
+		.flex-container {
+			padding: 0;
+			margin: 0 auto;
+			list-style: none;
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-flow: row wrap;
+			justify-content: center;
+			align-items: center;
+			max-width: 894px;
+		}
+
+		.flex-item {
+			margin-top: 10px;
+			text-align: center;
 		}
 		
-		#info .leftTable td:nth-child(2) {
-			width: 100%;
+		.flex-item div {
+			padding: 0.75rem;
+			box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+			margin: 1rem;
 		}
 		
-		#info .rightTable {
-			text-align: right;
-		}
-		
-		#info .rightTable td:nth-child(1) {
-			width: 100%;
+		@media all and (max-width: 889px) {
+			.flex-container {
+				max-width: 582px;
+			}
+			
+			.flex-item:nth-child(1) {
+				order: 1;
+			}
+
+			.flex-item:nth-child(2) {
+				order: 2;
+			}
+
+			.flex-item:nth-child(3) {
+				order: 4;
+			}
+
+			.flex-item:nth-child(4) {
+				order: 3;
+			}
+			
+			.flex-item:nth-child(5) {
+				order: 5;
+			}
+
+			.flex-item:nth-child(6) {
+				order: 6;
+			}
+
+			.flex-item:nth-child(7) {
+				order: 8;
+			}
+
+			.flex-item:nth-child(8) {
+				order: 7;
+			}
 		}
 		
 		#paid {
@@ -159,7 +207,7 @@
 		}
 		
 		#copyright {
-		    text-align: center;
+				text-align: center;
 			clear: both;
 			font-weight: 300;
 			font-style: normal;
@@ -195,47 +243,16 @@
 		<div id="wrapper">
 			<div id="info">
 				<h1 style="text-align: center;">Vote Halton Winkler for Drama Club Treasurer 2016!</h1>
-				<table class="leftTable">
-					<tr>
-						<td>
-							<img src="images/halton1.jpg" alt="A sexy Halton stands pondering the future while holding is favorite drink." height="300"/>
-						</td>
-						<td>
-							<p>Treasurer Halton<br/>Point keeper of champions.<br/>Vote to make it so.</p>
-						</td>
-					</tr>
-				</table>
-				<table class="rightTable">
-					<tr>
-						<td>
-							<p>Halton has three names.<br/>Three points in a triangle.<br/>Illuminati.</p>
-						</td>
-						<td>
-							<img src="images/halton2.png" alt="Halton talking about drama club points." height="300"/>
-						</td>
-					</tr>
-				</table>
-				<table class="leftTable">
-					<tr>
-						<td>
-							<img src="images/halton3.png" alt="Halton keep track of all the facts. All of them..." height="300"/>
-						</td>
-						<td>
-							<p>Named Halton, Rhubarb<br/>And also Jimmy Two:Jims.<br/>In three names we trust.</p>
-						</td>
-					</tr>
-				</table>
-				<table class="rightTable">
-					<tr>
-						<td>
-							<p>ITS point sheets.<br/>He will keep them out of the<br/>Refrigerator.</p>
-						</td>
-						<td>
-							<img src="images/halton4.png" alt="A great supporter talking about where Halton could keep the points." height="300"/>
-						</td>
-					</tr>
-				</table>
-				<div style="clear:both;"></div>
+				<ul class="flex-container">
+					<li class="flex-item" style="flex-grow:0;"><div><img src="images/halton1.jpg" alt="A sexy Halton stands pondering the future while holding is favorite drink."/></div></li>
+					<li class="flex-item" style="flex-grow:2;"><p>Treasurer Halton<br/>Point keeper of champions.<br/>Vote to make it so.</p></li>
+					<li class="flex-item" style="flex-grow:2;"><p>Halton has three names.<br/>Three points in a triangle.<br/>Illuminati.</p></li>
+					<li class="flex-item" style="flex-grow:0;"><div><img src="images/halton2.png" alt="Halton talking about drama club points."/></div></li>
+					<li class="flex-item" style="flex-grow:0;"><div><img src="images/halton3.png" alt="Halton keep track of all the facts. All of them..."/></div></li>
+					<li class="flex-item" style="flex-grow:2;"><p>Named Halton, Rhubarb<br/>And also Jimmy Two:Jims.<br/>In three names we trust.</p></li>
+					<li class="flex-item" style="flex-grow:2;"><p>ITS point sheets.<br/>He will keep them out of the<br/>Refrigerator.</p></li>
+					<li class="flex-item" style="flex-grow:0;"><div><img src="images/halton4.png" alt="A great supporter talking about where Halton could keep the points."/></div></li>
+				</ul>
 			</div>
 			<footer>
 				<p id="paid">Paid for by Halton 2016</p>
