@@ -40,7 +40,7 @@
 			margin: 0;
 			padding: 0;
 			background: #FAFAFA;
-			color: black;
+			color: #364350;
 			font-size: 100%;
 			font-family: 'Source Sans Pro', sans-serif;
 		}
@@ -87,22 +87,27 @@
 		}
 		
 		#wrapper {
-			max-width: 1000px;
+			max-width: 60rem;
 			margin: auto;
 		}
 		
 		#info {
-			padding: 15px;
+			padding: 1rem;
 		}
 		
 		h1 {
-			color: #FF4D4D;
-			font-size: 2.4rem;
+			color: #F55B5B;
+			font-size: 2.7rem;
 		}
 		
 		img {
-			padding: 10px;
+			padding: 0.75rem;
 			box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+			margin: 1rem;
+		}
+		
+		p {
+			padding: 1.75rem;
 		}
 		
 		#paid {
@@ -136,9 +141,20 @@
 			fill: #0076d7;
 		}
 		
+		#copyright {
+		    text-align: center;
+			clear: both;
+			font-weight: 300;
+			font-style: normal;
+			letter-spacing: .1em;
+			text-transform: uppercase;
+			font-size: .9rem;
+		}
+		
 		footer {
 			margin: 0 auto;
 			padding: 2.5rem 0 1rem;
+			text-align: center;
 		}
 	</style>
 	<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
@@ -162,13 +178,16 @@
 		<div id="wrapper">
 			<div id="info">
 				<h1 style="text-align: center;">Vote Halton Winkler for Drama Club Treasurer 2016!</h1>
-				<img src="images/halton.jpg"/>
+				<img src="images/halton.jpg" style="float:left;" alt="A sexy Halton stands pondering the future while holding is favorite drink."/>
+				<p>Vote for Halton to be your next Drama Club Treasurer. Halton can do this. Please stand by while more interesting information is formulated by Professor Nolan  Choquette.</p>
+				<div style="clear:both;"></div>
 			</div>
 			<footer>
 				<p id="paid">Paid for by Halton 2016</p>
 				<span id="bill">
 					<svg viewBox="0 0 350 47"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="billionaires.svg#billionaires"></use></svg>
 				</span>
+				<p><span id="copyright">© Halton 2016</span></p>
 			</footer>
 		</div>
 	</div>
